@@ -27,7 +27,7 @@
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { private-repo-6dff } from './consent.js';
+import { vibeHome } from './consent.js';
 import type { TunnelStartOpts } from '@pooriaarab/vibe-core';
 
 /** Default rendezvous: the getvibe.dev signaling Worker (ws base URL). */
@@ -165,7 +165,7 @@ function buildConfig(raw: Record<string, unknown>): VibeShareConfig {
  * with built-in defaults. Unknown fields are ignored; nothing here is logged
  * (the file may carry secrets).
  */
-export function readConfigFile(file = join(private-repo-6dff(), 'config.json')): VibeShareConfig {
+export function readConfigFile(file = join(vibeHome(), 'config.json')): VibeShareConfig {
   try {
     if (!existsSync(file)) return {};
     const raw = parseRawConfig(file);

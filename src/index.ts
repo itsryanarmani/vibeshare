@@ -25,7 +25,7 @@ import { LocalHttpTransport, type LocalHttpTransportOptions } from './localHttp.
 import { ShareManager, SHARE_SCOPE, type CreatedShare } from './manager.js';
 import type { CreateShareOptions } from './types.js';
 
-export { FileConsentStore, loadLedger, private-repo-6dff } from './consent.js';
+export { FileConsentStore, loadLedger, vibeHome } from './consent.js';
 export {
   DEFAULT_ICE_SERVERS,
   DEFAULT_SIGNALING_URL,
