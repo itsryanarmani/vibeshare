@@ -9,7 +9,7 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { createConsentLedger, type ConsentGrant, type ConsentLedger, type ConsentStore } from '@pooriaarab/vibe-core';
 
-export function private-repo-6dff(): string {
+export function vibeHome(): string {
   return process.env['VIBESHARE_HOME'] ?? join(homedir(), '.vibeshare');
 }
 
@@ -21,7 +21,7 @@ function ensureDir(dir: string): void {
 export class FileConsentStore implements ConsentStore {
   readonly file: string;
 
-  constructor(file = join(private-repo-6dff(), 'consent.json')) {
+  constructor(file = join(vibeHome(), 'consent.json')) {
     this.file = file;
   }
 
@@ -70,7 +70,7 @@ export interface ActiveShareRecord {
 }
 
 function sharesDir(): string {
-  return join(private-repo-6dff(), 'shares');
+  return join(vibeHome(), 'shares');
 }
 
 export function writeActiveShare(rec: ActiveShareRecord): void {
