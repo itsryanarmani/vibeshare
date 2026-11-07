@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.pooriaarab/vibeshare-live",
+  "name": "io.github.itsryanarmani/vibeshare-live",
   "description": "Share a live agent coding session by URL. Spectate or invite in.",
   "version": "0.2.4",
   "repository": {
